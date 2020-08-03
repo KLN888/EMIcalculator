@@ -1,2 +1,2 @@
 # EMIcalculator
-A simple web application using html,css,js fir calculating monthly EMI
+A simple web application using html,css,js for calculating monthly EMI
