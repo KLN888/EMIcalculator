@@ -7,7 +7,6 @@
 
 </head>
 <body>
-<style src="style.js"></style>
 <div id="container">
     <h1>EMI Calculator</h1>
     <div id="calculator">
