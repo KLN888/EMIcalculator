@@ -1,0 +1,34 @@
+function calculateTip() {
+    var loanamt = document.getElementById("loanamt").value;
+    var rate = document.getElementById("rate").value;
+    var dura = document.getElementById("dura").value;
+
+    if (loanamt === "" || rate == 0) {
+        alert("Please enter values");
+        return;
+    }
+
+    if (dura === "" || dura <= 1) {
+        dura = 1;
+        document.getElementById("each").style.display = "none";
+    } else {
+        document.getElementById("each").style.display = "block";
+    }
+
+    var total = ((+(loanamt * (rate/100)))+(+loanamt))/dura;
+
+    total = Math.round(total * 100) / 100;
+
+    total = total.toFixed(2);
+
+    document.getElementById("amt").style.display = "block";
+    document.getElementById("tot").innerHTML = total;
+
+}
+
+document.getElementById("amt").style.display = "none";
+document.getElementById("each").style.display = "none";
+
+document.getElementById("calculate").onclick = function() {
+    calculateTip();
+};
